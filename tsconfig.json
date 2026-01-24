@@ -1,0 +1,43 @@
+// WORKS FOR BACKEND
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",//HOST EXPECTED FORMAT
+    "target": "es2022",
+    "sourceMap": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+// WORKS FOR DRIZZLE MIGRATE
+// {
+//   "compilerOptions": {
+//     "module": "nodenext",              // Use Node’s ESM/CJS rules
+//     "moduleResolution": "nodenext",    // Match Node.js runtime behavior
+//     "target": "es2022",                // Modern JS features
+//     "sourceMap": false,
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "esModuleInterop": true,           // Allows default import from CJS
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true
+//   },
+//   "include": [
+//     "src/**/*.ts"
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }

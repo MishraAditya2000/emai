@@ -1,11 +1,15 @@
+import "dotenv/config"
 import express from 'express';
 import router from './services/routes.js';
+// import cors from 'cors';
 
 const app = express();
-const port = 3000;
+// app.use(cors())
+app.use(express.json())
+const port =process.env.PORT||8080;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get('/health', (req, res) => {
+ res.json({status:"ok",time:new Date().toISOString()})
 });
 app.use("/api/v1",router)
 app.listen(port, () => {

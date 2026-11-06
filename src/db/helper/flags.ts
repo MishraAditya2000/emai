@@ -1,6 +1,9 @@
-import { integer } from "drizzle-orm/pg-core"
+import { boolean } from "drizzle-orm/pg-core"
 
 
-export const flags={  isDeleted:integer("is_deleted").default(0),
-  isBlocked:integer("is_blocked").default(0),
-  isArchieved:integer("is_archieved").default(0),}
+export const flags=
+{
+isDeleted:{isDeleted:boolean("is_deleted").default(false)},
+isBlocked:{isBlocked:boolean("is_blocked").default(false)},
+isArchived:{isArchived:boolean("is_archived").default(false)}
+}
